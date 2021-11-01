@@ -1,0 +1,6 @@
+[submodule "libft"]
+	path = libft
+	url = https://github.com/RedroNotik/libft
+[submodule "Get_Next_Line"]
+	path = Get_Next_Line
+	url = https://github.com/RedroNotik/Get_Next_Line
