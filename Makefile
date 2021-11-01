@@ -15,7 +15,7 @@ $(NAME) : $(OBJ) ./libft/libft.a
 	@echo "\033[90m[\033[32mSuccess\033[90m]"
 
 %.o : %.c
-	@gcc $(FLAGS)  -c $< -o $@
+	@gcc $(FLAGS) -Imlx_linux -O3 -c $< -o $@
 
 clean :
 	@make clean -C ./libft/
