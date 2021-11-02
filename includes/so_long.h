@@ -6,7 +6,7 @@
 #define SO_LONG_SO_LONG_H
 
 # include "./libft.h"
-# include <mlx.h>
+//# include <mlx.h>
 # include <errno.h> // errno
 //# include <sys/types.h>
 //# include <sys/stat.h>

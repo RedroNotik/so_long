@@ -136,7 +136,6 @@ int	char_check(char *str[])
 void	strings_check(char *str[])
 {
 	int str_len;
-	int len;
 	int	error_flag;
 
 	str_len = 0;
@@ -153,36 +152,36 @@ void	strings_check(char *str[])
 	}
 }
 
-// int	main(int argc, char *argv[])
-// {
-// 	int		file;
-// 	char	**str;
+ int	main(int argc, char *argv[])
+ {
+ 	int		file;
+ 	char	**str;
 
-// 	errno = 0;
-// 	file = 0;
-// 	if (argc != 2)
-// 		error_msg("Incorrect number of arguments");
-// 	if (!check_format(argv[1]))
-// 		error_msg("Incorrect file format");
-// 	file = open(argv[1], O_RDONLY);
-// 	if (file < 0)
-// 		error_msg("File problem");
-// 	int i = 0; //todo delete
-// 	str = parsing(file, argv[1]);
-// 	strings_check(str);
-// 	while(str[i]) //todo delete
-// 	{
-// 		printf("%s and %ld\n", str[i], ft_strlen(str[i]));
-// 		i++;
-// 	}
-// 	return (0);
-// }
+ 	errno = 0;
+ 	file = 0;
+ 	if (argc != 2)
+ 		error_msg("Incorrect number of arguments");
+ 	if (!check_format(argv[1]))
+ 		error_msg("Incorrect file format");
+ 	file = open(argv[1], O_RDONLY);
+ 	if (file < 0)
+ 		error_msg("File problem");
+ 	int i = 0; //todo delete
+ 	str = parsing(file, argv[1]);
+ 	strings_check(str);
+ 	while(str[i]) //todo delete
+ 	{
+ 		printf("%s and %ld\n", str[i], ft_strlen(str[i]));
+ 		i++;
+ 	}
+ 	return (0);
+ }
 
-
-#include "so_long.h"
-
-int	main(void)
-{
-	void	*mlx;
-	mlx = mlx_init();
-}
+//
+//#include "so_long.h"
+//
+//int	main(void)
+//{
+//	void	*mlx;
+//	mlx = mlx_init();
+//}
