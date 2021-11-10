@@ -6,6 +6,7 @@ LIST = ./src/parsing.c ./src/parsing_check.c ./src/drawing_map.c ./main.c
 
 OBJ	= $(patsubst %.c,%.o,$(LIST))
 
+
 all :
 	@make -C ./libft/
 	@make $(NAME)
