@@ -6,7 +6,7 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:04:16 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/10 19:39:04 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/15 14:28:19 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # define A2 123
 # define A3 125
 # define A4 124
+# define YELLOW 0xffff00
+# define RED 0xFF2400
 
 # include "./libft.h"
 # include "../mlx/mlx.h"
@@ -31,6 +33,7 @@
 typedef struct s_char
 {
 	int	c;
+	int	c1;
 	int	e;
 	int	p;
 	int	i;
@@ -45,6 +48,7 @@ typedef struct s_data
 	void	*mlx_win;
 	int		height;
 	int		weight;
+	t_char	*loot;
 }				t_data;
 
 typedef struct s_image
@@ -53,6 +57,7 @@ typedef struct s_image
 	char	*human;
 	char	*food;
 	char	*plate;
+	char	*exit;
 }				t_image;
 
 //// parsing
@@ -67,5 +72,13 @@ void	strings_check(char *str[], t_char *help, t_data *img);
 ////drawing_map
 char	**create_map(int argc, char *argv[]);
 void	draw_map(t_data img);
-
+////key_hooker
+int		close_game(int keycode, t_data *vars);
+t_char	set_player(t_data img, t_char coord);
+int		key_hook(int keycode, t_data *img);
+////move_player
+void	move_w(t_data *img, t_char coord);
+void	move_a(t_data *img, t_char coord);
+void	move_s(t_data *img, t_char coord);
+void	move_d(t_data *img, t_char coord);
 #endif //SO_LONG_SO_LONG_H
