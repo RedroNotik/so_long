@@ -6,7 +6,7 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:34:46 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/15 15:06:36 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/17 16:52:47 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	move_w(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i - 1][coord.j] = 'P';
 		}
+		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }
@@ -54,6 +55,7 @@ void	move_a(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i][coord.j - 1] = 'P';
 		}
+		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }
@@ -77,6 +79,7 @@ void	move_s(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i + 1][coord.j] = 'P';
 		}
+		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }
@@ -100,6 +103,7 @@ void	move_d(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i][coord.j + 1] = 'P';
 		}
+		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }

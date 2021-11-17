@@ -6,7 +6,7 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:04:16 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/15 14:28:19 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/17 17:15:55 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_data
 	int		height;
 	int		weight;
 	t_char	*loot;
+	int		count; //todo delete
 }				t_data;
 
 typedef struct s_image
@@ -58,6 +59,7 @@ typedef struct s_image
 	char	*food;
 	char	*plate;
 	char	*exit;
+	char 	*plate2; //todo delete
 }				t_image;
 
 //// parsing
@@ -72,6 +74,7 @@ void	strings_check(char *str[], t_char *help, t_data *img);
 ////drawing_map
 char	**create_map(int argc, char *argv[]);
 void	draw_map(t_data img);
+t_image	set_src(t_image sprite);
 ////key_hooker
 int		close_game(int keycode, t_data *vars);
 t_char	set_player(t_data img, t_char coord);

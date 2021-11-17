@@ -6,7 +6,7 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:38:01 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/15 14:38:04 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/17 16:45:26 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void	draw_smth(t_data *img)
 int	key_hook(int keycode, t_data *img)
 {
 	t_char		coord;
-	static int	count;
 
 	coord = set_player(*img, coord);
 	if (keycode == ESC)
@@ -73,5 +72,5 @@ int	key_hook(int keycode, t_data *img)
 			RED, "PRESS ANY KEY TO EXIT");
 		mlx_hook(img->mlx_win, 2, 1L << 0, close_game, &(*img));
 	}
-	printf("%d - Score\n", count++);
+	return (1);
 }

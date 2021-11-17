@@ -34,6 +34,7 @@ int	main(int argc, char *argv[])
 	errno = 0;
 	img.map = create_map(argc, argv);
 	strings_check(img.map, &help, &img);
+	help.p = 0;
 	img.loot = &help;
 	img.mlx = mlx_init();
 	img.mlx_win = mlx_new_window(img.mlx, 64 * img.weight,

@@ -40,6 +40,7 @@ t_image	set_src(t_image sprite)
 	sprite.human = "./sprites/squirrel.xpm";
 	sprite.plate = "./sprites/bush.xpm";
 	sprite.exit = "./sprites/Houses.xpm";
+	sprite.plate2 = "./sprites/bush2.xpm"; //todo delete
 	return (sprite);
 }
 

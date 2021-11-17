@@ -3,7 +3,7 @@ NAME = so_long
 FLAGS =   -I./includes -Imlx #-Wall -Wextra -Werror
 
 LIST = ./src/parsing.c ./src/parsing_check.c  ./src/move_player.c ./src/drawing_map.c  \
-		./main.c ./src/key_hooker.c
+		./bonus/main_bonus.c ./src/key_hooker.c
 
 
 OBJ	= $(patsubst %.c,%.o,$(LIST))
