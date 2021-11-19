@@ -12,19 +12,27 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f7f495a-bab3-4412-a41d-703718665c5f" name="Changes" comment="All is done">
-      <change afterPath="$PROJECT_DIR$/bonus/main_bonus.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="0f7f495a-bab3-4412-a41d-703718665c5f" name="Changes" comment="Bonus">
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/so_long.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bonus/drawing_map_bonus.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bonus/key_hooker_bonus.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bonus/move_bonus.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bonus/move_player_bonus.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bonus/parsing_check_bonus.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/so_long_bonus.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bonus/main_bonus.c" beforeDir="false" afterPath="$PROJECT_DIR$/bonus/main_bonus.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/so_long.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/so_long.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft" beforeDir="false" afterPath="$PROJECT_DIR$/libft" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" afterPath="$PROJECT_DIR$/libft/libft.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/so_long" beforeDir="false" afterPath="$PROJECT_DIR$/so_long" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/drawing_map.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/drawing_map.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/key_hooker.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/key_hooker.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/move_player.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/move_player.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.ber" beforeDir="false" afterPath="$PROJECT_DIR$/test.ber" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test2.ber" beforeDir="false" afterPath="$PROJECT_DIR$/test2.ber" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +95,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
@@ -103,11 +112,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -124,7 +128,9 @@
       <updated>1636545485534</updated>
       <workItem from="1636545487629" duration="11579000" />
       <workItem from="1636961986996" duration="14772000" />
-      <workItem from="1637156074982" duration="3527000" />
+      <workItem from="1637156074982" duration="3603000" />
+      <workItem from="1637312667785" duration="10058000" />
+      <workItem from="1637333079519" duration="9846000" />
     </task>
     <task id="LOCAL-00001" summary="All is done">
       <created>1636979120907</created>
@@ -147,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636979365090</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Bonus">
+      <created>1637159712056</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637159712056</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +180,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="All is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="All is done" />
+    <MESSAGE value="Bonus" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bonus" />
   </component>
 </project>

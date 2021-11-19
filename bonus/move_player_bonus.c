@@ -6,18 +6,29 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:34:46 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/19 17:50:55 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/19 20:17:11 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "/Users/ghanh/Dev/so_long/includes/so_long.h"
+#include "so_long_bonus.h"
 
-void	move_w(t_data *img, t_char coord)
+//void lost_game(t_data *img)
+//{
+////
+//}
+//		if (img->map[coord.i - 1][coord.j] == 'S')
+//			img->loot->win_lose = 1;
+
+void	move_w_b(t_data *img, t_char coord)
 {
+	img->count = 800;
 	if (img->map[coord.i - 1][coord.j] != '1')
 	{
+		++img->loot->p;
 		if (img->map[coord.i - 1][coord.j] == 'C')
 			img->loot->c1++;
+		if (img->map[coord.i - 1][coord.j] == 'S')
+			img->loot->winlose = -1;
 		if (img->map[coord.i - 1][coord.j] == 'E')
 		{
 			img->map[coord.i - 1][coord.j] = 'X';
@@ -31,17 +42,20 @@ void	move_w(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i - 1][coord.j] = 'P';
 		}
-		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }
 
-void	move_a(t_data *img, t_char coord)
+void	move_a_b(t_data *img, t_char coord)
 {
+	img->count = 300;
 	if (img->map[coord.i][coord.j - 1] != '1')
 	{
+		++img->loot->p;
 		if (img->map[coord.i][coord.j - 1] == 'C')
 			img->loot->c1++;
+		if (img->map[coord.i][coord.j - 1] == 'S')
+			img->loot->winlose = -1;
 		if (img->map[coord.i][coord.j - 1] == 'E')
 		{
 			img->map[coord.i][coord.j - 1] = 'X';
@@ -55,17 +69,20 @@ void	move_a(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i][coord.j - 1] = 'P';
 		}
-		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }
 
-void	move_s(t_data *img, t_char coord)
+void	move_s_b(t_data *img, t_char coord)
 {
+	img->count = 825;
 	if (img->map[coord.i + 1][coord.j] != '1')
 	{
+		++img->loot->p;
 		if (img->map[coord.i + 1][coord.j] == 'C')
 			img->loot->c1++;
+		if (img->map[coord.i + 1][coord.j] == 'S')
+			img->loot->winlose = -1;
 		if (img->map[coord.i + 1][coord.j] == 'E')
 		{
 			img->map[coord.i + 1][coord.j] = 'X';
@@ -79,17 +96,20 @@ void	move_s(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i + 1][coord.j] = 'P';
 		}
-		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }
 
-void	move_d(t_data *img, t_char coord)
+void	move_d_b(t_data *img, t_char coord)
 {
+	img->count = 725;
 	if (img->map[coord.i][coord.j + 1] != '1')
 	{
+		++img->loot->p;
 		if (img->map[coord.i][coord.j + 1] == 'C')
 			img->loot->c1++;
+		if (img->map[coord.i][coord.j + 1] == 'S')
+			img->loot->winlose = -1;
 		if (img->map[coord.i][coord.j + 1] == 'E')
 		{
 			img->map[coord.i][coord.j + 1] = 'X';
@@ -103,7 +123,6 @@ void	move_d(t_data *img, t_char coord)
 				img->map[coord.i][coord.j] = '0';
 			img->map[coord.i][coord.j + 1] = 'P';
 		}
-		printf("%d\n", ++img->loot->p);
 		draw_map(*img);
 	}
 }

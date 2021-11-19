@@ -6,7 +6,7 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 17:04:16 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/17 17:15:55 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/19 20:14:27 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ typedef struct s_char
 	int	p;
 	int	i;
 	int	j;
+	int	winlose;
 }			t_char;
 
 typedef struct s_data
@@ -49,7 +50,7 @@ typedef struct s_data
 	int		height;
 	int		weight;
 	t_char	*loot;
-	int		count; //todo delete
+	int		count;
 }				t_data;
 
 typedef struct s_image
@@ -59,7 +60,7 @@ typedef struct s_image
 	char	*food;
 	char	*plate;
 	char	*exit;
-	char 	*plate2; //todo delete
+	char	*plate2;
 }				t_image;
 
 //// parsing

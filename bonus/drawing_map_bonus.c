@@ -6,11 +6,11 @@
 /*   By: ghanh <ghanh@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 14:38:36 by ghanh             #+#    #+#             */
-/*   Updated: 2021/11/19 14:19:32 by ghanh            ###   ########.fr       */
+/*   Updated: 2021/11/19 20:26:38 by ghanh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/so_long.h"
+#include "so_long_bonus.h"
 
 char	**create_map(int argc, char *argv[])
 {
@@ -28,17 +28,25 @@ char	**create_map(int argc, char *argv[])
 	return (map);
 }
 
-t_image	set_src(t_image sprite)
+t_image_b	set_src_bonus(t_image_b sprite)
 {
-	sprite.floor = "./sprites/grass.xpm";
-	sprite.food = "./sprites/seed_1.xpm";
-	sprite.human = "./sprites/squirrel.xpm";
-	sprite.plate = "./sprites/bush.xpm";
-	sprite.exit = "./sprites/Houses.xpm";
+	sprite.floor = "/Users/ghanh/Dev/so_long/sprites/grass.xpm";
+	sprite.food = "/Users/ghanh/Dev/so_long/sprites/seed_1.xpm";
+	sprite.enemy = "/Users/ghanh/Dev/so_long/sprites/squirrel.xpm";
+	sprite.plate = "/Users/ghanh/Dev/so_long/sprites/bush.xpm";
+	sprite.exit = "/Users/ghanh/Dev/so_long/sprites/Houses.xpm";
+	sprite.pl = "/Users/ghanh/Dev/so_long/bonus/player.xpm";
+	sprite.pl1 = "/Users/ghanh/Dev/so_long/bonus/player1.xpm";
+	sprite.pl2 = "/Users/ghanh/Dev/so_long/bonus/player2.xpm";
+	sprite.pl3 = "/Users/ghanh/Dev/so_long/bonus/player3.xpm";
+	sprite.pl4 = "/Users/ghanh/Dev/so_long/bonus/player4.xpm";
+	sprite.pl5 = "/Users/ghanh/Dev/so_long/bonus/player5.xpm";
+	sprite.pl6 = "/Users/ghanh/Dev/so_long/bonus/player6.xpm";
+	sprite.pl7 = "/Users/ghanh/Dev/so_long/bonus/player7.xpm";
 	return (sprite);
 }
 
-void	*if_case(t_data img, t_image sprite, int x, int y)
+void	*if_case(t_data img, t_image_b sprite, int x, int y)
 {
 	int	s;
 
@@ -47,29 +55,31 @@ void	*if_case(t_data img, t_image sprite, int x, int y)
 		img.img = mlx_xpm_file_to_image(img.mlx, sprite.plate, &s, &s);
 	else if (img.map[y][x] == 'C')
 		img.img = mlx_xpm_file_to_image(img.mlx, sprite.food, &s, &s);
-	else if (img.map[y][x] == 'P')
-		img.img = mlx_xpm_file_to_image(img.mlx, sprite.human, &s, &s);
 	else if (img.map[y][x] == 'E')
 		img.img = mlx_xpm_file_to_image(img.mlx, sprite.exit, &s, &s);
+	else if (img.map[y][x] == 'S')
+		img.img = mlx_xpm_file_to_image(img.mlx, sprite.enemy, &s, &s);
 	else if (img.map[y][x] == 'X')
 	{
 		img.img = mlx_xpm_file_to_image(img.mlx, sprite.exit, &s, &s);
 		mlx_put_image_to_window(img.mlx, img.mlx_win, img.img,
 			x * s, y * s);
-		img.img = mlx_xpm_file_to_image(img.mlx, sprite.human, &s, &s);
+		img.img = mlx_xpm_file_to_image(img.mlx, sprite.pl, &s, &s);
 	}
+	else if (img.map[y][x] == 'L')
+		img.img = mlx_xpm_file_to_image(img.mlx, sprite.pl, &s, &s);
 	mlx_put_image_to_window(img.mlx, img.mlx_win, img.img, x * s, y * s);
 	return (img.img);
 }
 
 void	draw_map(t_data img)
 {
-	int		x;
-	int		y;
-	int		s;
-	t_image	sprite;
+	int			x;
+	int			y;
+	int			s;
+	t_image_b	sprite;
 
-	sprite = set_src(sprite);
+	sprite = set_src_bonus(sprite);
 	s = 64;
 	y = 0;
 	while (y < img.height)
